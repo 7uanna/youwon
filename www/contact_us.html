@@ -1,0 +1,72 @@
+<!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+<div class="pages">
+	<!-- Page, "data-page" contains page name -->
+	<div data-page="contact_us" class="page navbar-fixed toolbar-through">
+		<!-- Top Navbar-->
+		<div class="navbar">
+			<div class="navbar-inner">
+				<!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+				<div class="center sliding title">Contact Us</div>
+				<div class="right">
+					<!--
+					  Right link contains only icon - additional "icon-only" class
+					  Additional "open-panel" class tells app to open panel when we click on this link
+					-->
+					<a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Scrollable page content -->
+		<div class="page-content">
+			<div class="content-block text-justify">
+				<div class="row">
+					<div class="col-50">
+						<span class="bold" style="color: #91d3e6">A</span>
+						&nbsp;767 Fifth Avenue<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;New York</br>
+						&nbsp;&nbsp;&nbsp;&nbsp;NY 10135
+					</div>
+					<div class="col-50">
+						<span class="bold" style="color: #91d3e6">T</span> 123 456 7891<br/>
+						<span class="bold" style="color: #91d3e6">E</span> myapp@gmail.com<br/>
+					</div>
+				</div>
+				<div class="row margin-top-20">
+					<div class="col-100">
+						<form>
+							<div class="row margin-top-10">
+								<div class="col-100"><input type="text" value="" class="form-input" placeholder="Name"/></div>
+							</div>
+							<div class="row margin-top-10">
+								<div class="col-100"><input type="text" value="" class="form-input" placeholder="Email"/></div>
+							</div>
+							<div class="row margin-top-10">
+								<div class="col-100">
+									<select id="question_type" name="question_type" class="form-input">
+										<option	value="1">General Question</option>
+										<option	value="2">Tech Issue</option>
+										<option	value="3">Collaboration</option>
+										<option	value="4">Other</option>
+									</select>
+								</div>
+							</div>
+							<div class="row margin-top-10">
+								<div class="col-100"><textarea class="form-input" placeholder="Message" rows="5"></textarea></div>
+							</div>
+							<div class="row margin-top-10">
+								<div class="col-100"><input type="button" value="Send" class="bold button-big button button-fill color-gray"/></div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Bottom Toolbar-->
+<div class="toolbar">
+	<div class="toolbar-inner center-align">
+		<img src="images/logo.png" class="footer-logo"/>
+	</div>
+</div>

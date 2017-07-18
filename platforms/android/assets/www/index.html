@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+	<head>
+		<!--
+			Customize this policy to fit your own app's needs. For more guidance, see:
+				https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+			Some notes:
+				* gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+				* https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+				* Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+					* Enable inline JS: add 'unsafe-inline' to default-src
+			-->
+		<!--meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"-->
+
+		<!-- Required meta tags-->
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="msapplication-tap-highlight" content="no"/>
+
+		<!-- Your app title -->
+		<title>YouWon</title>
+
+		<!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+			http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+		 -->
+		 <!-- Ios Style -->
+		<link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css"/>
+		<link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css"/>
+
+		<!-- Icon Style -->
+		<link rel="stylesheet" href="lib/framework7/css/framework7-icons.css"/>
+
+		<!-- Custom Style -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster"/>
+		<link rel="stylesheet" href="css/styles.css"/>
+	</head>
+
+	<body>
+		<!-- Status bar overlay for full screen mode (PhoneGap) -->
+		<div class="statusbar-overlay"></div>
+
+		<!-- Panels overlay-->
+		<div class="panel-overlay"></div>
+
+		<!-- Right panel with reveal effect-->
+		<div class="panel panel-right panel-cover">
+			<div class="content-block">
+				<ul class="section-one">
+					<li class="menu-social"><div><a class="item-link close-panel" href="social_points.html">Social Point: 1787</a></div></li>
+					<li class="menu-main"><div class="menu-line"><a class="item-link close-panel" href="index.html">YouWon Main</a></div></li>
+					<li class="menu-free-money"><div class="menu-line"><a class="item-link close-panel" href="free_money.html">Free Money</a></div></li>
+					<li class="menu-free-products"><div class="menu-line"><a class="item-link close-panel" href="free_products.html">Free Products</a></div></li>
+					<li class="menu-sweepstakes"><a class="item-link close-panel" href="sweepstakes.html">Sweepstakes</a></li>
+				</ul>
+				<ul class="section-two">
+					<li class="menu-myarea"><div class="menu-line"><a class="item-link close-panel myarea_link" href="">My Area</a></div></li>
+					<li class="menu-about-social"><div class="menu-line"><a class="item-link close-panel" href="about_social_points.html">About Social Share</a></div></li>
+					<li class="menu-rewards"><div class="menu-line"><a class="item-link close-panel" href="reward_points.html">YouWon Rewards</a></div></li>
+					<li class="menu-mywon"><div class="menu-line"><a class="item-link close-panel" href="my_won.html">My Won</a></div></li>
+					<li class="menu-faq"><a class="item-link close-panel" href="faq.html">FQA</a></li>
+				</ul>
+				<ul class="section-three">
+					<li class="menu-about-us"><div class="menu-line"><a class="item-link close-panel" href="about_us.html">About Us</a></div></li>
+					<li class="menu-contact-us"><div class="menu-line"><a class="item-link close-panel" href="contact_us.html">Contact Us</a></div></li>
+					<li class="menu-privacy"><div class="menu-line"><a class="item-link close-panel" href="privacy.html">Privacy Policy</a></div></li>
+                    <li class="menu-disclaimer"><div class="menu-line"><a class="item-link close-panel" href="disclaimer.html">Disclaimer</a></div></li>
+                    <li class="menu-terms"><a class="item-link close-panel external" oncick="window.open('http://youwon.win/terms.html', '_blank', 'location=yes');" href="#" >Terms & Conditions</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Views -->
+		<div class="views">
+			<!-- Your main view, should have "view-main" class -->
+			<div class="view view-main">
+				<!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+				<div class="pages">
+					<!-- Page, "data-page" contains page name -->
+					<div data-page="main" class="page navbar-fixed toolbar-through">
+						<!-- Top Navbar-->
+						<div class="navbar">
+							<div class="navbar-inner">
+								<!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+								<div class="center sliding title">YouWon</div>
+								<div class="right">
+									<!--
+                                      Right link contains only icon - additional "icon-only" class
+                                      Additional "open-panel" class tells app to open panel when we click on this link
+                                    -->
+									<a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Scrollable page content -->
+						<div class="page-content">
+							<div class="content-block">
+								<div class="row">
+									<div class="col-25"></div>
+									<div class="col-50">
+										<div class="packages cached">
+											<a href="free_products.html"><img src="images/main/free_products.gif"/></a>
+											<div>Free Products</div>
+										</div>
+									</div>
+									<div class="col-25"></div>
+								</div>
+								<div class="row">
+									<div class="col-50">
+										<div class="packages cached">
+											<a href="free_money.html"><img src="images/main/free_money.gif"/></a>
+											<div>Free Money</div>
+										</div>
+									</div>
+									<div class="col-50">
+										<div class="packages">
+											<a href="sweepstakes.html"><img src="images/main/sweepstakes.png"/></a>
+											<div>Sweepstakes</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-100">
+										<div class="free-easy-fun cached">
+											<img src="images/main/free_easy_fun.gif"/>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Bottom Toolbar-->
+				<div class="toolbar" style="width: 100%;">
+					<div class="center-align toolbar-content">
+						<img src="images/logo.png" class="footer-logo"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+		<script type="text/javascript" src="js/youwon.js"></script>
+	</body>
+</html>

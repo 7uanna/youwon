@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <title>Start App With Login Screen</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/css/framework7.ios.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/css/framework7.ios.colors.min.css">
+   </head>
+   <body>
+      <div class="views">
+         <div class="view view-main">
+            <div class="navbar">
+               <div class="navbar-inner">
+                  <div class="center sliding">Start App With Login Screen</div>
+               </div>
+            </div>
+            <div class="pages">
+               <div data-page="index" class="page navbar-fixed">
+                  <div class="page-content">
+                     <div class="content-block">
+                        <p><a href="#" class="open-login-screen">Click here to open Login Screen</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="login-screen modal-in">
+         <div class="view">
+            <div class="page">
+               <div class="page-content login-screen-content">
+                    <div id="animation">
+                        <img class="sequencer" src="images/logo_loading/0.png">
+                        <img class="sequencer" src="images/logo_loading/1.png">
+                        <img class="sequencer" src="images/logo_loading/2.png">
+                        <img class="sequencer" src="images/logo_loading/3.png">
+                        <img class="sequencer" src="images/logo_loading/4.png">
+                        <img class="sequencer" src="images/logo_loading/5.png">
+                        <img class="sequencer" src="images/logo_loading/6.png">
+                        <img class="sequencer" src="images/logo_loading/7.png">
+                        <img class="sequencer" src="images/logo_loading/8.png">
+                        <img class="sequencer" src="images/logo_loading/9.png">
+                        <img class="sequencer" src="images/logo_loading/10.png">
+                        <img class="sequencer" src="images/logo_loading/11.png">
+                        <img class="sequencer" src="images/logo_loading/12.png">
+                        <img class="sequencer" src="images/logo_loading/13.png">
+                        <img class="sequencer" src="images/logo_loading/14.png">
+                        <img class="sequencer" src="images/logo_loading/15.png">
+                        <img class="sequencer" src="images/logo_loading/16.png">
+                    </div>
+               </div>
+            </div>
+         </div>
+      </div>
+	  <style>
+		#animation img {
+    display: none;
+}
+#animation img:first-child {
+    display: block;
+}
+	  </style>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/js/framework7.min.js"></script>
+      <script>
+         // Here you can initialize the app
+         var myApp = new Framework7();
+
+         // If your using custom DOM library, then save it to $$ variable
+         var $$ = Dom7;
+
+         // Add the view
+         var mainView = myApp.addView('.view-main', {
+            // enable the dynamic navbar for this view:
+            dynamicNavbar: true
+         });
+
+         jQuery(document).ready(function(){
+            function startAnimation() { 
+				var frames = document.getElementById("animation").children;
+				var frameCount = frames.length;
+				var i = 0;
+				setInterval(function () { 
+					frames[i % frameCount].style.display = "none";
+					frames[++i % frameCount].style.display = "block";
+				}, 50);
+			}
+			//startAnimation();
+         });
+      </script>
+   </body>
+</html>
